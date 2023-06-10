@@ -2,7 +2,7 @@ from models import Quote, Author
 import json
 
 
-def load_json_quote_to_database(file_path):
+def load_quotes_to_database(file_path):
     with open(file_path, 'r') as file:
         data = json.load(file)
         for item in data:
@@ -20,7 +20,7 @@ def load_json_quote_to_database(file_path):
             #document.save()
 
 
-def load_json_author_to_database(file_path):
+def load_authors_to_database(file_path):
     with open(file_path, 'r') as file:
         data = json.load(file)
         for item in data:
@@ -29,7 +29,7 @@ def load_json_author_to_database(file_path):
 
 
 if __name__ == '__main__':
-    load_json_author_to_database('authors.json')
-    load_json_quote_to_database('quotes.json')
+    load_authors_to_database('authors.json')
+    load_quotes_to_database('quotes.json')
 
 
